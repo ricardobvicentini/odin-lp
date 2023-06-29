@@ -34,6 +34,7 @@ body {
 .header {
     border: 1px solid red;
     background-color: var(--bg-header);
+    width: 100dvw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,25 +49,24 @@ body {
 
 .nav-bar {
     border: 1px solid red;
-    width: 45%;
+    margin-right: 20%;
 }
 
 .nav-bar > ul {
+    border: 1px solid red;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 10%;
 }
 
 ul > li {
-    border: 1px solid red;
     margin-inline: 10%;
-    font-size: clamp(12px, 2vw, 18px);
+    font-size: clamp(10px, 2vw, 18px);
     color: var(--color-link);
 }
 
 ul > li::marker {
-    content: '🔹 ';
+    content: '🔹';
 }
 
 .hero {
@@ -111,5 +111,76 @@ ul > li::marker {
 }
 
 .info {
+    border: 1px solid red;
     background-color: var(--color-hero);
+    padding: 4% 2%;
+}
+
+.info > h2 {
+    color: var(--color-text);
+    font-size: clamp(18px, 3vw, 36px);
+    text-align: center;
+}
+
+.info-wrapper {
+    border: 1px solid red;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 6% 2%;
+    @media screen and (min-width: 650px) {
+        flex-direction: row;
+    }
+}
+
+.info-container {
+    border: 1px solid red;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--color-text);
+}
+
+.info-container p {
+    padding-top: 8%;
+    font-size: clamp(10px, 2vw, 14px);
+    text-align: center;
+}
+
+.info-img2 {
+    width: clamp(100px, 5vw, 300px);
+    height: clamp(100px, 5vw, 300px);
+    border: 3px solid var(--color-btn);
+    border-radius: 10px;
+    background-image: url(../images/img2.jpg);
+    background-size: cover;
+}
+
+.info-img3 {
+    width: clamp(100px, 3vw, 300px);
+    height: clamp(100px, 3vw, 300px);
+    border: 3px solid var(--color-btn);
+    border-radius: 10px;
+    background-image: url(../images/img3.jpg);
+    background-size: cover;
+}
+
+.info-img4 {
+    width: clamp(100px, 3vw, 300px);
+    height: clamp(100px, 3vw, 300px);
+    border: 3px solid var(--color-btn);
+    border-radius: 10px;
+    background-image: url(../images/img4.jpg);
+    background-size: cover;
+}
+
+.info-img5 {
+    width: clamp(100px, 3vw, 350px);
+    height: clamp(100px, 3vw, 350px);
+    border: 3px solid var(--color-btn);
+    border-radius: 10px;
+    background-image: url(../images/img5.jpg);
+    background-size: cover;
 }
