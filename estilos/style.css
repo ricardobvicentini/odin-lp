@@ -27,12 +27,15 @@ img {
     height: auto;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
 }
 
 .header {
-    border: 1px solid red;
     background-color: var(--bg-header);
     display: flex;
     justify-content: space-between;
@@ -43,16 +46,14 @@ body {
 .logo {
     font-size: clamp(18px, 4vw, 36px);
     color: var(--color-logo);
-    margin-inline: 10%;
+    margin-inline: 8vw;
 }
 
 .nav-bar {
-    border: 1px solid red;
-    margin-right: 20%;
+    margin-right: 20vw;
 }
 
 .nav-bar > ul {
-    border: 1px solid red;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -65,41 +66,45 @@ ul > li {
 }
 
 ul > li::marker {
+    content: '♦️  ';
+    transition: all .3s;
+}
+
+ul a {
+    text-decoration: none;
+    color: var(--color-link);
+    transition: all .3s ease-in-out;
+}
+
+ul a:hover, 
+ul a:focus,
+ul>li:hover::marker {
+    color: var(--color-btn);
     content: '🔹';
 }
 
 .hero {
-    border: 1px solid red;
     background-color: var(--bg-header);
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 40% 40%;
     align-items: center;
-    padding: 4% 2%;
-}
-
-.hero-container {
-    border: 1px solid red;
-    max-width: 45%;
+    justify-content: center;
+    gap: 16px;
+    padding: 3vh 2vw 5vh;
 }
 
 .hero-container > h2 {
-    border: 1px solid red;
+
     color: var(--color-hero);
     font-size: clamp(16px, 4vw, 48px);
     font-weight: bolder;
-    padding: 2%;
+    padding: 0 2%;
 }
 
 .hero-container > p {
-    border: 1px solid red;
     color: var(--color-hero-p);
     font-size: clamp(8px, 2vw, 18px);
     padding: 2%;
-}
-
-.hero-img {
-    border: 1px solid red;
-    width: clamp(150px, 30%, 400px);
 }
 
 .btn {
@@ -107,16 +112,34 @@ ul > li::marker {
     color: var(--color-hero-p);
     font-size: clamp(10px, 2vw, 18px);
     font-weight: bold;
-    border: none;
+    border: 2px solid var(--color-btn);
     border-radius: 5px;
     padding: 2% 5%;
+    margin-top: 2%;
+    margin-left: .5vw;
     cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.btn:hover, 
+.btn:focus {
+    background-color: var(--color-hero-p);
+    color: var(--color-btn);
+    border: 2px inset var(--color-btn);
+}
+
+.hero-img {
+    width: clamp(120px, 35vw, 350px);
+    margin: 0 4vw 0 6vw;
+}
+
+.hero-img>img {
+    max-height: max(190px, 220px);
 }
 
 .info {
-    border: 1px solid red;
     background-color: var(--color-hero);
-    padding: 4% 2%;
+    padding: 4vh 2vw;
 }
 
 .info > h2 {
@@ -126,44 +149,35 @@ ul > li::marker {
 }
 
 .info-container {
-    border: 1px solid red;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    @media screen and (min-width: 660px) {
-        flex-direction: row;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 16px;
+    margin-top: 20px;
+    margin-inline: 15vw;  
+    @media screen and (min-width: 514px) {
+        grid-auto-flow: column;
     }
 }
 
 .info-wrapper {
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
 }
 
-/* .info-img {
-    border: 1px solid red;
-    width: 100px;
-    height: 100px;
-} */
+.img-cont {
+    max-width: 130px;
+    max-height: 130px;
+}
 
 .img {
-    border: 1px solid red;
-    width: clamp(80px, 60%, 150px);
-    height: auto;
     border: 4px solid var(--color-btn);
     border-radius: 10px;
-    @media screen and (min-width: 660px) {
-        width: clamp(100px, 70%, 200px);
-        height: auto;
-    }
 }
 
 .info-container p {
-    font-size: clamp(12px, 2vw, 14px);
+    font-size: clamp(10px, 2vw, 14px);
     text-align: center;
     text-wrap: balance
 }
@@ -173,25 +187,81 @@ ul > li::marker {
 }
 
 .quote-fig {
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
-    padding: 10% 20%;
+    gap: 8px;
+    padding: 10vh 20vw;
 }
 
 .quote-p {
-    font-size: clamp(14px, 2vw, 16px);
-    text-wrap: balance;
-    margin-bottom: 3%;
+    font-size: clamp(14px, 2vw, 26px);
+    max-width: 60vw;
 }
 
 .quote-cap {
     text-align: right;
     font-size: clamp(14px, 2.5vw, 26px);
+    max-width: 60vw;
 }
 
-.ctn {
-    border: 1px solid red;
+.cta {
     background-color: var(--color-hero);
-    padding: 4% 2%;
+    padding: 4vh 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-container {
+    width: 75vw;
+    background-color: var(--bg-cta);
+    color: var(--color-link);
+    padding: 2% 8%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-ctn > h3 {
+    font-size: clamp(12px, 2vw, 26px);
+}
+
+.text-ctn > p {
+    font-size: clamp(10px, 2vw, 24px);
+}
+
+.btn-ctn {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-btn {
+    border: 2px solid var(--color-hero-p);
+    color: var(--color-hero-p);
+    background-color: var(--color-btn);
+    font-size: clamp(10px, 2vw, 18px);
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 4% 8%;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.cta-btn:hover,
+.cta-btn:focus {
+    background-color: var(--color-hero-p);
+    color: var(--color-btn);
+}
+
+.footer {
+    background-color: var(--bg-footer);
+    color: var(--color-hero-p);
+    font-size: clamp(10px, 2vw, 20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 2.5vh;
 }

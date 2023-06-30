@@ -13,9 +13,9 @@
         <h1 class="logo">Logo</h1>
         <nav class="nav-bar">
             <ul>
-                <li>About</li>
-                <li>Products</li>
-                <li>Contact</li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -35,35 +35,27 @@
             </div>
         </section>
 
-        <section class="info">
+        <section id="about" class="info">
             <h2>Some information.</h2>
             <div class="info-container">
 
                     <div class="info-wrapper">
-                        <!-- <div class="info-img"> -->
-                            <img class="img" src="images/img3.jpg" width="640" height="480">
-                        <!-- </div> -->
+                            <div class="img-cont"><img class="img" src="images/img3.jpg" width="640" height="480"></div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing.</p>
                     </div>
                 
                     <div class="info-wrapper">
-                        <!-- <div class="info-img"> -->
-                            <img class="img" src="images/img3.jpg" width="640" height="480">
-                        <!-- </div> -->
+                            <div class="img-cont"><img class="img" src="images/img3.jpg" width="640" height="480"></div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing.</p>
                     </div>
                 
                     <div class="info-wrapper">
-                        <!-- <div class="info-img"> -->
-                            <img class="img" src="images/img3.jpg" width="640" height="480">
-                        <!-- </div> -->
+                            <div class="img-cont"><img class="img" src="images/img3.jpg" width="640" height="480"></div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing.</p>
                     </div>
                 
                     <div class="info-wrapper">
-                        <!-- <div class="info-img"> -->
-                            <img class="img" src="images/img3.jpg" width="640" height="480">
-                        <!-- </div> -->
+                            <div class="img-cont"><img class="img" src="images/img3.jpg" width="640" height="480"></div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing.</p>
                     </div>
             </div>
@@ -79,15 +71,22 @@
             </figure>
         </section>
 
-        <section class="ctn">
-            <div>
-                <h3>Call to Action</h3>
-                <p>Lorem ipsum dolor sit amet.</p>
-                <button>Sign up</button>
+        <!-- Call To Action -->
+
+        <section class="cta">
+            <div class="cta-container">
+                <div class="text-ctn">
+                    <h3>Call to Action</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="btn-ctn"><button class="cta-btn">Sign up</button>
+                </div>
             </div>
         </section>
 
-        <footer>Copyright &copy; XXXX 2023</footer>
+        <!-- Footer -->
+
+        <footer class="footer">Copyright &copy; The Odin Project 2023</footer>
     </main>
     
 </body>
