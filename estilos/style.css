@@ -139,7 +139,7 @@ ul>li:hover::marker {
 
 .info {
     background-color: var(--color-hero);
-    padding: 4vh 2vw;
+    padding: 8vh 2vw;
 }
 
 .info > h2 {
@@ -190,11 +190,11 @@ ul>li:hover::marker {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    padding: 10vh 20vw;
+    padding: 20vh 18vw 15vh;
 }
 
 .quote-p {
-    font-size: clamp(14px, 2vw, 26px);
+    font-size: clamp(12px, 2vw, 26px);
     max-width: 60vw;
 }
 
