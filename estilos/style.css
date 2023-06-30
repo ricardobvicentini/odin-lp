@@ -34,7 +34,6 @@ body {
 .header {
     border: 1px solid red;
     background-color: var(--bg-header);
-    width: 100dvw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -79,7 +78,8 @@ ul > li::marker {
 }
 
 .hero-container {
-    max-width: 40vw;
+    border: 1px solid red;
+    max-width: 45%;
 }
 
 .hero-container > h2 {
@@ -94,7 +94,6 @@ ul > li::marker {
     border: 1px solid red;
     color: var(--color-hero-p);
     font-size: clamp(8px, 2vw, 18px);
-    /* text-wrap: balance; */
     padding: 2%;
 }
 
@@ -126,53 +125,73 @@ ul > li::marker {
     text-align: center;
 }
 
-.info-wrapper {
-    border: 1px solid red;
-    margin: auto;
-    width: 75%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    padding: 6% 0;
-    @media screen and (min-width: 660px) {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-}
-
 .info-container {
     border: 1px solid red;
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 3%;
-    padding: 0 1%;
-    color: var(--color-text);
+    @media screen and (min-width: 660px) {
+        flex-direction: row;
+    }
+}
+
+.info-wrapper {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* .info-img {
+    border: 1px solid red;
+    width: 100px;
+    height: 100px;
+} */
+
+.img {
+    border: 1px solid red;
+    width: clamp(80px, 60%, 150px);
+    height: auto;
+    border: 4px solid var(--color-btn);
+    border-radius: 10px;
+    @media screen and (min-width: 660px) {
+        width: clamp(100px, 70%, 200px);
+        height: auto;
+    }
 }
 
 .info-container p {
-    padding-top: 6%;
     font-size: clamp(12px, 2vw, 14px);
     text-align: center;
+    text-wrap: balance
 }
 
-.info-img {
+.quote {
+    background-color: var(--bg-quote);
+}
+
+.quote-fig {
     border: 1px solid red;
-    width: clamp(100px, 34%, 150px);
-    height: 100px;
-    border: 3px solid var(--color-btn);
-    border-radius: 10px;
-   /*  @media screen and (min-width: 360px) {
-            width: 130px;
-            height: 130px;
-        } */
+    display: flex;
+    flex-direction: column;
+    padding: 10% 20%;
 }
 
-/* .info-img img {
-    width: 100%;
-    height: 100%;
-    border: 3px solid var(--color-btn);
-    border-radius: 10px;
-} */
+.quote-p {
+    font-size: clamp(14px, 2vw, 16px);
+    text-wrap: balance;
+    margin-bottom: 3%;
+}
+
+.quote-cap {
+    text-align: right;
+    font-size: clamp(14px, 2.5vw, 26px);
+}
+
+.ctn {
+    border: 1px solid red;
+    background-color: var(--color-hero);
+    padding: 4% 2%;
+}
