@@ -66,8 +66,8 @@ ul > li {
 }
 
 ul > li::marker {
-    content: '♦️  ';
-    transition: all .3s;
+    content: '◽ ';
+    transition: all .3s ease-in-out;
 }
 
 ul a {
